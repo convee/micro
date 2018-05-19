@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package pb;
+
+message LoginReq
+{
+  string username = 1; // 用户名，如果为空，则注册新账号
+  string password = 2; // 密码
+  int32 version = 3;   // 客户端版本
+}
+
+message LoginResp
+{
+  int32 result = 1;     // 结果码
+  string username = 2;  // 用户名
+  uint32 uid = 3;    // 用户id
+  string token = 4; //申请的有效token值
+  string expires_in = 5;     //token的有效时间,单位为秒，这里设定7天有效期（604800秒）
+  string refresh_token = 6; //token过期情况下，用来刷新access_token值,设置30天的有效期
+}
+
+
+

@@ -1,0 +1,19 @@
+package: micro
+import:
+- package: github.com/golang/protobuf
+  subpackages:
+  - proto
+- package: github.com/micro/go-grpc
+- package: github.com/micro/go-micro
+  subpackages:
+  - client
+  - server
+- package: github.com/satori/uuid
+- package: github.com/sirupsen/logrus
+- package: gitlab.com/convee/system
+  subpackages:
+  - mysql
+  - redis
+- package: golang.org/x/net
+  subpackages:
+  - context

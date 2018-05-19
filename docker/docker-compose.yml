@@ -1,0 +1,14 @@
+version: "2"
+services:
+  consul:
+    image: progrium/consul:latest
+    restart: always
+    command: -server -bootstrap
+  golang-hellowolrd:
+    image: golang:1.9-alpine3.7
+    working_dir: /go/src/micro
+    restart: always
+    links:
+      - consul
+    volumes:
+      - ../:/go/src/micro

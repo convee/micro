@@ -1,0 +1,35 @@
+app_name = "CENTER"
+
+[[redis]]
+name = "chess"
+timeout = 1
+prefix = "chess:"
+[[redis.master]]
+ip = "127.0.0.1"
+port = "6379"
+[[redis.master]]
+ip = "127.0.0.1"
+port = "6379"
+[[redis.slave]]
+ip = "127.0.0.1"
+port = "6379"
+
+
+[[mysql]]
+name = "chess"
+timeout = 1
+prefix = ""
+[[mysql.master]]
+ip = "127.0.0.1"
+port = "3306"
+database = "chess"
+username = "root"
+password = "root"
+charset = "UTF8"
+[[mysql.slave]]
+ip = "127.0.0.1"
+port = "3306"
+database = "chess"
+username = "root"
+password = "root"
+charset = "UTF8"
